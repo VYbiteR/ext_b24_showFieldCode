@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Bitrix24: код поля",
+  "version": "1.0.0",
+  "description": "Показывает и копирует код поля в карточках CRM и смарт-процессов Bitrix24.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Коды полей Bitrix24",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "all_frames": true,
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
